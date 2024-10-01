@@ -1,0 +1,257 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend", sans-serif;
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* Initial gradient background */
+    background-size: 300% 300%; /* Ensures the background covers the entire screen and allows the animation */
+    animation: gradient-animation 10s ease infinite; /* Apply animation to background */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Keyframes for background animation */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.381);
+    border-color: black;
+    margin-top: 2px;
+    width: 100%;
+    font-family: "Mochiy Pop One", sans-serif;
+    border-style: ridge;
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    font-weight: 500;
+    justify-content: center;
+    height: 50px;
+}
+
+.navbar2 {
+    background-color: black;
+    color: white;
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: center;
+    font-family: "Mochiy Pop One", sans-serif;
+}
+
+h1 {
+    margin-left: 550px;
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar li, .navbar2 li {
+    margin-right: 80px;
+    transition: background 0.5s ease, color 0.5s ease, width 0.5s ease;
+}
+
+.navbar li:hover {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background on hover */
+    border-radius: 30px;
+    color: white;
+    width: 100px; /* Adjust width */
+    text-align: center;
+}
+
+.navbar2 li:hover {
+    background: linear-gradient(to right, #f12711, #f5af19); /* Gradient background on hover */
+    border-radius: 15px;
+    color: black;
+    width: 100px;
+    text-align: center;
+}
+
+.navbar a, .navbar2 a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Keeps the original color of the text */
+}
+
+.navbar a:hover, .navbar2 a:hover {
+    text-decoration: none; /* No underline on hover */
+    color: #ff6347; /* Optional: Change color on hover */
+}
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ffffff, rgba(255,255,255,0.4), rgba(255,255,255,0.1), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle 1s ease-out forwards;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+.container {
+    padding: 10px;
+}
+
+.box-container {
+    margin-top: 20px;
+    padding: 15px;
+    width: 25%;
+    color: #ffffff;
+    background-color: black;
+}
+
+.parallax {
+    background-image: url('money.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content2 {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Slight overlay on text */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-top: 0;
+    text-justify: inter-cluster;
+}
+
+.content {
+    padding: 50px;
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Additional parallax sections */
+.parallax2, .parallax3, .parallax4, .parallax5 {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax2 { background-image: url('alcemist.jpg'); }
+.parallax3 { background-image: url('subconcious.jpg'); }
+.parallax4 { background-image: url('horror.jpg'); }
+.parallax5 { background-image: url('Marvel.jpg'); }
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-top: white;
+    border-style: ridge;
+}
+
+.footer h2 {
+    margin-bottom: 10px;
+    color: lightcoral;
+}
+
+.footer p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #30cfd0; /* You can change this color for hover effect */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    h1 {
+        margin-left: 20px;
+    }
+    .navbar li, .navbar2 li {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .box-container {
+        width: 50%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Reduce font size for smaller screens */
+        margin-left: 0;
+        text-align: center;
+    }
+    .navbar, .navbar2 {
+        flex-direction: column; /* Stack navbar items vertically */
+        padding: 5px;
+    }
+    .navbar li, .navbar2 li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between navbar items */
+    }
+    .box-container {
+        width: 90%; /* Full width for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 2rem; /* Further reduce h2 font size */
+    }
+    p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+}

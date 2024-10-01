@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookloe</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+         <h1>BOOK LIBRARY</h1>
+         <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#"></a>Gallery</li>
+           
+            <li>Order</li>
+            <li>Pay</li>
+         </ul>
+        </nav>
+        <nav>
+            <ul class="navbar2">
+               <li><a href="#"></a>HORROR</li>
+               <li><a href="#"></a>SELF-HELP</li>
+               <li><a href="#"></a>COMICS</li>
+               <li><a href="#"></a>FANTASY</li>
+               <li><a href="#"></a>SCI-FI</li>
+               <li><a href="#"></a>BIOGRAPHY</li>
+               <li><a href="#"></a>RELIGIOUS</li>            
+            </ul>
+           </nav>
+
+
+           <div class="container">
+              <div class="box-container">
+                <H2>Title : Rich Dad Poor Dad</H2>
+                <h3>Author : Robert</h3>
+                <img src="richdadpoordad.jpg" alt="img">
+                <p>Rich Dad Poor Dad is a personal finance book written by Robert T. Kiyosaki. It contrasts the financial mindsets and habits of two influential figures in Kiyosaki's life—his biological father, referred to as "Poor Dad," and the father of his best friend, who he calls "Rich Dad."</p>
+                <button>Remove</button>
+              </div>
+           </div>
+
+           <button class="add-button" id="popup-button">+</button>
+
+           <div class="overlay"></div>
+
+           <div class="popup-box">
+            <h2>Add Book</h2>
+            <form>
+               <input type="text" placeholder="Book Title" id="book-title-input">
+               <input type="text" placeholder="Book Author" id="book-author-input">
+               <h3>Add The book image</h3>
+               <input type="file" id="imageUpload" accept="image/*">
+               <textarea placeholder="Short Description" id="book-description"></textarea>
+               <button id="add-book">ADD</button>
+               <button id="cancel-book">Cancel</button> 
+            </form>
+           </div>
+</body>
+</html>
